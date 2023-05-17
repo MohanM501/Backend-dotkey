@@ -6,7 +6,9 @@ const { LanguageModel } = require("../Models/Language.model");
 const { StateModel } = require("../Models/State.model");
 
 const customerRouter=express.Router();
-
+customerRouter.get("/",async(req,res)=>{
+    res.send('Hi customer');
+})
 customerRouter.get("/:page",async(req,res)=>{
     const page=Number(req.params.page);
     let customer_data=await CustomerModel.find().skip((page-1)*5).limit(5);

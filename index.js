@@ -23,7 +23,7 @@ app.use("/customer",customerRouter);
 app.use("/searchable",searchableRouter);
 app.use("/customer/EditDeletecustomer",EditDeleteRouter)
 
-app.listen(9001,async(req,res)=>{
+app.listen(8080,async(req,res)=>{
     try {
         await connection;
         console.log("connected to DB successfully");
